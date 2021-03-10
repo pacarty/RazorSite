@@ -1,0 +1,19 @@
+﻿@page
+@model IndexModel
+
+@{
+    ViewData["Title"] = "MoviesIndex";
+}
+
+<h1>Movies Index</h1>
+<p>@Html.DisplayNameFor(model => model.MovieList[0].Title)</p>
+<p>@Html.DisplayNameFor(model => model.MovieList[0].Genre)</p>
+
+@foreach (var item in Model.MovieList)
+{
+    <ul>
+        <li>@Html.DisplayFor(modelItem => item.Title)</li>
+        <li>@Html.DisplayFor(modelItem => item.Genre)</li>
+    </ul>
+    <br />
+}
