@@ -1,0 +1,17 @@
+﻿@page
+@model DetailsModel
+
+@{ 
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+<h4>Movie</h4>
+<p>
+    <strong>@Html.DisplayNameFor(model => model.Movie.Title): </strong>
+    @Html.DisplayFor(model => model.Movie.Title)
+</p>
+<p>
+    <strong>@Html.DisplayNameFor(model => model.Movie.Genre): </strong>
+    @Html.DisplayFor(model => model.Movie.Genre)
+</p>
