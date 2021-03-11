@@ -1,0 +1,23 @@
+﻿@page
+@model DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+<h3>Are you sure you want to delete this?</h3>
+<h4>Movie</h4>
+<p>
+    <strong>@Html.DisplayNameFor(model => model.Movie.Title): </strong>
+    @Html.DisplayFor(model => model.Movie.Title)
+</p>
+<p>
+    <strong>@Html.DisplayNameFor(model => model.Movie.Genre): </strong>
+    @Html.DisplayFor(model => model.Movie.Genre)
+</p>
+
+<form method="post">
+    <input type="hidden" asp-for="Movie.MovieId" />
+    <input type="submit" value="Delete" />
+</form>
