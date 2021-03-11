@@ -1,0 +1,17 @@
+﻿@page
+@model CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+<h4>Movie</h4>
+
+<form method="post">
+    <label asp-for="Movie.Title"></label>
+    <input asp-for="Movie.Title" />
+    <label asp-for="Movie.Genre"></label>
+    <input asp-for="Movie.Genre" />
+    <input type="submit" value="Create" />
+</form>
