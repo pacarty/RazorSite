@@ -6,14 +6,22 @@
 }
 
 <h1>Movies Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+
 <p>@Html.DisplayNameFor(model => model.MovieList[0].Title)</p>
 <p>@Html.DisplayNameFor(model => model.MovieList[0].Genre)</p>
 
 @foreach (var item in Model.MovieList)
 {
-    <ul>
-        <li>@Html.DisplayFor(modelItem => item.Title)</li>
-        <li>@Html.DisplayFor(modelItem => item.Genre)</li>
-    </ul>
+<ul>
+    <li>@Html.DisplayFor(modelItem => item.Title)</li>
+    <li>@Html.DisplayFor(modelItem => item.Genre)</li>
+    <li><a asp-page="./Edit" asp-route-id="@item.MovieId">Edit</a></li>
+    <li><a asp-page="./Details" asp-route-id="@item.MovieId">Details</a></li>
+    <li><a asp-page="./Delete" asp-route-id="@item.MovieId">Delete</a></li>
+</ul>
     <br />
 }
