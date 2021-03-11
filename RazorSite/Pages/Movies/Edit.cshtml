@@ -1,0 +1,18 @@
+﻿@page
+@model EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+<h4>Movie</h4>
+
+<form method="post">
+    <input type="hidden" asp-for="Movie.MovieId" />
+    <label asp-for="Movie.Title"></label>
+    <input asp-for="Movie.Title" />
+    <label asp-for="Movie.Genre"></label>
+    <input asp-for="Movie.Genre" />
+    <input type="submit" value="Save" />
+</form>
